@@ -186,17 +186,18 @@ span {
 .flecha .flechas {
     color: aqua;
     font-size: 2.5em;
-    animation: saltar 1s infinite;
+    animation: saltar 3s ease-out infinite;
 }
 
 @keyframes saltar {
-    from{
-        transform: translateY(0);
-        transition: .1s;
+    0%{
+        transform: translateY(20px);
     }
-    to {
+    50% {
         transform: translateY(60px);
-        transition: .1s;
+    }
+    100% {
+        transform: translateY(20px);
     }
 }
 
@@ -209,6 +210,10 @@ span {
     background-size: cover;
     background-attachment: fixed;
     object-fit: cover;
+}
+.letter {
+    text-align: justify;
+    line-height: 150%;
 }
 .about {
     display: grid;
@@ -367,6 +372,7 @@ span {
     height: 200px;
     background-color: #191c32;
     color: #fff;
+    border-top:  solid #222541;
 }
 
 .footer-content h2 {
@@ -381,18 +387,40 @@ span {
 .sotial-network {
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    width: 400px;
     margin-top: 20px;
     align-items: center;
 }
 
 .sotial-network i {
-    font-size: 1.5em;
     cursor: pointer;
+    border: 0.5px solid hsla(0,0%,100%,.26);
+    border-radius: 3.125rem;
+    font-size: 2rem;
+    height: 3.75rem;
+    width: 3.75rem;
+    text-align: center;
+    padding-top: 0.75rem;
 }
 
-.sotial-network i:hover {
-    background-color: #fff;
+.sotial-network .instagram:hover {
+    background-color: rgb(228, 64, 95);
+    color: #fff;
+    box-shadow: none;
+}
+.sotial-network .linkedin:hover{
+    background-color: #0e76a8;
+    color: #fff;
+    box-shadow: none;
+}
+.sotial-network .whatsapp:hover{
+    background-color: #1d9119;
+    color: #fff;
+    box-shadow: none;
+}
+.sotial-network .github:hover{
+    background-color: #494949;
+    color: #fff;
     box-shadow: none;
 }
 
@@ -506,6 +534,9 @@ span {
 
 .whatsapp {
     color: #1d9119;
+}
+.github {
+    color: #494949;
 }
 
 /* test skills*/
@@ -698,9 +729,14 @@ li .icon {
 
     .info-content .sotial-network {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 1rem;
     }
-
+    footer .sotial-network{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
     .download-cv {
         display: none;
     }
