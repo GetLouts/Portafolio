@@ -518,7 +518,7 @@ span {
     justify-content: space-around;
     display: grid;
     grid-template-columns: repeat(3, 3fr);
-    margin-top: 25px;
+    gap: 2rem;
 }
 .im {
     background: linear-gradient(180deg,rgba(0,0,0,.44313725490196076),rgba(0,0,0,.6784313725490196)), url(../img/porta.jpg);
@@ -706,6 +706,7 @@ li .icon {
     .main {
         display: flex;
         flex-direction: column-reverse;
+        width: 60%;
     }
 
     .main img {
@@ -821,14 +822,14 @@ li .icon {
     .skills .skills-all {
         display: grid;
         align-items: center;
-        margin: 0px 50px 80px 60px;
+        margin: 100px 50px 80px 60px;
         justify-content: space-evenly;
     }
     .skills .skills-all ul {
         justify-content: space-around;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        margin-top: 100px;
+        gap: 2rem;
     }
     
     .skills i, p {
